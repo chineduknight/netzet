@@ -4,41 +4,34 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 
+const navLinks = [
+  { label: "About us", path: "/#" },
+  { label: "Contact", path: "/#" },
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  console.log("isMenuOpen:", isMenuOpen);
 
-  const navLink = [
-    {
-      label: "About Us",
-      path: "/#",
-    },
-    {
-      label: "Contact",
-      path: "/#",
-    },
-  ];
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <div className="flex mt-[35px] xl:mx-[212px] lg:mx-[100px] md:mx-[50px]  mx-[60px] justify-between p-4 text-white relative mb-4">
+    <nav className="relative flex  justify-center p-4 md:mb-8 md:mt-4 md:justify-between  md:mx-[230px]">
       <Logo />
 
-      {/* Hamburger for mobile and tablet */}
-      <div className="lg:hidden flex items-center">
+      {/* Mobile Menu Toggle */}
+      <div className="flex items-center lg:hidden absolute right-4">
         <button
-          onClick={toggleMenu}
-          className="text-white focus:outline-none"
+          onClick={handleToggleMenu}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          className="text-white focus:outline-none"
         >
           <svg
             className="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               strokeLinecap="round"
@@ -47,40 +40,40 @@ const Navbar = () => {
               d={
                 isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
               }
-            ></path>
+            />
           </svg>
         </button>
       </div>
 
-      {/* Mobile and tablet menu dropdown */}
+      {/* Desktop Navigation */}
+      <div className="hidden lg:flex space-x-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.label}
+            href={link.path}
+            className="text-[#A9A9A9] text-lg font-figtree font-semibold hover:text-white transition duration-300"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+
+      {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-16 right-4 bg-black bg-opacity-90 rounded-md p-4 shadow-lg z-50">
-          {navLink.map((link) => (
+        <div className="absolute top-10 right-4 mt-2 w-32 bg-black bg-opacity-90 rounded-md p-4 shadow-lg lg:hidden z-10">
+          {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.path}
-              className="block py-2 hover:text-gray-400 transition duration-300"
               onClick={() => setIsMenuOpen(false)}
+              className="block  py-2 text-[#A9A9A9]  font-figtree font-semibold "
             >
               {link.label}
             </Link>
           ))}
         </div>
       )}
-
-      {/* Desktop navigation */}
-      <div className="lg:flex hidden space-x-4">
-        {navLink.map((link) => (
-          <Link
-            key={link.label}
-            href={link.path}
-            className="hover:text-gray-400 transition duration-300"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div>
-    </div>
+    </nav>
   );
 };
 

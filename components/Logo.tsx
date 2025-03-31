@@ -9,7 +9,7 @@ const Logo = () => {
         alt="Logo"
         width={170}
         height={72}
-        className="md:h-[72px] md:w-[170px] w-[105px] h-[44px]"
+        className="md:h-[74px] md:w-[173.12px] w-[105px] h-[44px]"
       />
     </div>
   );
