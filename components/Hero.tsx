@@ -19,7 +19,12 @@ const Hero = () => {
     <div className="flex  ">
       <div className="relative flex flex-col-reverse md:flex-row lg:flex-row items-center  px-4 md:px-16 lg:px-32 max-w-7xl  xl:mx-[120px] ">
         <div className="w-full md:w-1/2 lg:w-2/3 z-10 pt-10 pb-20 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0">
-          <h1 className="text-[25px] md:text-2xl lg:text-3xl xl:text-[35px] font-bold text-white mb-4 text-center md:text-left leading-[1.2]">
+          <h1
+            className="text-[25px] md:text-2xl font-urbanist lg:text-3xl xl:text-[35px] font-bold text-white mb-4 text-center md:text-left leading-[1.2]"
+            style={{
+              fontFamily: "var(--font-urbanist)",
+            }}
+          >
             Want to Turn Social Media Into a Profitable Career?
           </h1>
           <h1
@@ -27,6 +32,7 @@ const Hero = () => {
             style={{
               textShadow: "2px 2px 0px #FC004E",
               lineHeight: "1.2",
+              fontFamily: "var(--font-urbanist)",
             }}
           >
             Discover your way to success with Fametonic:
@@ -36,6 +42,9 @@ const Hero = () => {
               <p
                 key={index}
                 className="md:text-base md:font-semibold mb-4 flex"
+                style={{
+                  fontFamily: "var(--font-figtree)",
+                }}
               >
                 <span className="pr-2.5 text-2xl">✨</span> {item.title}
               </p>
@@ -55,6 +64,8 @@ const Hero = () => {
             className="bg-[#FC004E] hover:bg-[#d1003f] text-white text-[20px]  font-bold justify-center py-3 px-8 rounded-xl w-full md:w-[270px] lg:w-[333px] transition duration-300 flex items-center shadow-lg"
             style={{
               boxShadow: "2px 2px 10px 0px #00E7F9",
+              fontFamily: "var(--font-figtree)",
+              width: "313px",
             }}
           >
             GET STARTED
@@ -62,16 +73,31 @@ const Hero = () => {
               <FaChevronRight size={14} color="#FFF" />
             </span>
           </button>
-          <p className="text-white font-normal leading-[16px] text-xs mt-3 pl-12">
+          <p
+            className="text-white font-normal leading-[16px] text-xs mt-3 pl-12"
+            style={{
+              fontFamily: "var(--font-figtree)",
+            }}
+          >
             1-minute quiz for personalized insights
           </p>
 
           <div className="hidden md:block">
-            <p className="text-[#ABABAB] text-xs font-medium mt-8 max-w-[350px] lg:max-w-[516px]">
+            <p
+              className="text-[#ABABAB] text-xs font-medium mt-8 max-w-[350px] lg:max-w-[516px]"
+              style={{
+                fontFamily: "var(--font-figtree)",
+              }}
+            >
               By clicking &quot;Get Started&quot;, you agree with Terms and
               Conditions, Privacy Policy, Subscription Terms
             </p>
-            <p className="text-[#ABABAB] text-[10px] font-medium mt-3">
+            <p
+              className="text-[#ABABAB] text-[10px] font-medium mt-3"
+              style={{
+                fontFamily: "var(--font-figtree)",
+              }}
+            >
               Fametonic 2025 ©All Rights Reserved.
             </p>
           </div>

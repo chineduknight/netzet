@@ -52,6 +52,9 @@ const Navbar = () => {
             key={link.label}
             href={link.path}
             className="text-[#A9A9A9] text-lg font-figtree font-semibold hover:text-white transition duration-300"
+            style={{
+              fontFamily: "var(--font-figtree)",
+            }}
           >
             {link.label}
           </Link>
@@ -67,6 +70,9 @@ const Navbar = () => {
               href={link.path}
               onClick={() => setIsMenuOpen(false)}
               className="block  py-2 text-[#A9A9A9]  font-figtree font-semibold "
+              style={{
+                fontFamily: "var(--font-figtree)",
+              }}
             >
               {link.label}
             </Link>
