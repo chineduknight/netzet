@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background: black !important;
+}
+
+p,
+button,
+span {
+  font-family: "Figtree", sans-serif;
+}
+h1 {
+  font-family: "Urbanist", sans-serif;
+}
