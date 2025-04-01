@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <nav className="relative w-full">
+    <nav className="relative w-full md:mb-8">
       <div className="max-w-7xl md:px-16 lg:px-32 xl:px-[120px] flex justify-center md:justify-between p-4 mt-4 md:ml-8">
         <Logo />
 
