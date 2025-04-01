@@ -27,7 +27,7 @@ const Hero = () => {
             Want to Turn Social Media Into a Profitable Career?
           </h1>
           <h2
-            className="text-2xl md:text-3xl w-[350px]   md:w-[500px] md:text-left lg:text-4xl xl:text-[35px] font-bold text-[#00E7F9] mb-4 text-center md:text-left leading-tight font-urbanist"
+            className="text-2xl md:text-3xl w-[350px] mx-auto md:mx-0  md:w-[500px] md:text-left lg:text-4xl xl:text-[35px] font-bold text-[#00E7F9] mb-4 text-center md:text-left leading-tight font-urbanist"
             style={{
               textShadow: "1px 4px 3px #FC004E",
 
